@@ -1,0 +1,368 @@
+
+# coding: utf-8
+
+# In[1]:
+
+
+#Setup Hive and Spark contexts
+import os
+import sys
+sys.path.append('/usr/hdp/current/spark2-client/python/')
+sys.path.append('/usr/hdp/current/spark2-client/python/lib/py4j-src.zip')
+from pyspark.context import SparkContext, SparkConf
+from pyspark.sql import SparkSession
+from pyspark import HiveContext
+from pyspark.context import SparkContext
+from pyspark.sql import Row
+from pyspark.sql.functions import countDistinct
+from pyspark.sql import SQLContext
+import pyspark.sql.session
+import time
+os.environ['HADOOP_CONF_DIR'] = "/etc/hadoop/conf"
+os.environ['HIVE_CONF_DIR'] = "/etc/hive/conf"
+os.environ['SPARK_HOME'] = "/usr/hdp/current/spark2-client/"
+os.environ["PYSPARK_PYTHON"]="/usr/bin/python3"
+os.environ["PYSPARK_DRIVER_PYTHON"]="ipython3"
+os.environ["PYSPARK_DRIVER_PYTHON_OPTS"]="notebook"
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+get_ipython().run_line_magic('matplotlib', 'inline')
+
+
+# In[2]:
+
+
+# Connect to the Spark cluster
+spark = SparkSession     .builder     .appName('spark-jupyterhub Test')     .enableHiveSupport()     .config('spark.shuffle.service.enabled', 'true')     .config('spark.executor.memory', '2688M')     .config('spark.dynamicAllocation.enabled', 'true')     .config('spark.dynamicAllocation.minExecutors', '0')     .config('spark.dynamicAllocation.maxExecutors', '20')     .getOrCreate()
+
+
+# In[3]:
+
+
+# Use a hive table
+# Reading data from 15-OCT to 31-OCT
+
+spark.sql("use tds_br")
+df2 = spark.sql("select id,torquestatus,tighteningerrorstatus,torquemaxlimit,torqueminlimit,torquefinaltarget,torque,idtool,idstation,batchstatus,bcount,bsize,anglemin,anglemax,finalangletarget,angle,anglestatus,station_position,stationname,PSetName,tighteningstatus from TighteningResult where id between 23350696 and 23978631")
+
+#df2.show()
+
+
+# In[4]:
+
+
+df2.columns
+
+
+# In[5]:
+
+
+# How many rows
+d = df2.count()
+print(d)
+
+
+# In[6]:
+
+
+df2.groupBy("tighteningstatus").count().show()
+
+
+# In[7]:
+
+
+df2.printSchema()
+
+
+# In[8]:
+
+
+data_df = df2.select("*").toPandas()
+
+
+# In[9]:
+
+
+data_df.head(2)
+
+
+# In[10]:
+
+
+data_df.describe()
+
+
+# In[11]:
+
+
+data_df.shape
+
+
+# In[12]:
+
+
+data_df.columns
+
+
+# In[13]:
+
+
+data_df.isna()
+
+
+# In[14]:
+
+
+data_df.sum()
+
+
+# In[15]:
+
+
+data_df.dropna()
+
+
+# In[16]:
+
+
+data_df.isnull().sum()
+
+
+# In[17]:
+
+
+data_df['tighteningstatus'].value_counts()
+
+
+# In[18]:
+
+
+fig, ax = plt.subplots(figsize=(10,10)) 
+sns.heatmap(abs(data_df.dropna().corr()),ax=ax)
+
+
+# In[19]:
+
+
+sns.lmplot(x='torquestatus',y='tighteningstatus',data=data_df) 
+
+
+# In[20]:
+
+
+sns.lmplot(x='anglestatus',y='tighteningstatus',data=data_df) 
+
+
+# In[21]:
+
+
+sns.lmplot(x='torque',y='torquefinaltarget',data=data_df)
+
+
+# In[22]:
+
+
+from sklearn.model_selection import train_test_split
+
+features = ['torquestatus','torquemaxlimit','torqueminlimit','torquefinaltarget','torque','idstation','batchstatus','bcount','bsize','anglemin','anglemax','finalangletarget','angle','anglestatus','station_position'] 
+#features = ['torquestatus','anglestatus'] 
+
+X = data_df[features]
+y = data_df['tighteningstatus']
+
+X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.3,random_state=1236)
+
+
+# In[23]:
+
+
+X_train.count()
+
+
+# In[24]:
+
+
+X_test.count()
+
+
+# In[25]:
+
+
+print('X_train first 2 values ', X_train.iloc[:2, :].values)
+print('X_train.shape = ', X_train.shape, '\t y_train.shape = ', y_train.shape)
+print('X_test.shape = ', X_test.shape, '\t y_test.shape = ', y_test.shape)
+
+
+# In[26]:
+
+
+from sklearn.ensemble import RandomForestClassifier
+random_forest_clf = RandomForestClassifier(n_estimators=100,random_state=1)
+random_forest_clf.fit(X_train,y_train)
+
+print('number of classes: ', random_forest_clf.n_classes_)
+print('number of features: ', random_forest_clf.n_features_) 
+
+
+# In[27]:
+
+
+train_score = random_forest_clf.score(X_train,y_train)
+test_score = random_forest_clf.score(X_test,y_test)
+print("Accuracy train/test: %.2f/%.2f" % (train_score, test_score))
+
+
+# In[28]:
+
+
+from sklearn.tree import DecisionTreeClassifier
+decision_tree_clf = DecisionTreeClassifier(random_state=100)
+decision_tree_clf.fit(X_train,y_train)
+
+print('number of classes: ', decision_tree_clf.n_classes_)
+print('number of features: ', decision_tree_clf.n_features_) 
+
+
+# In[29]:
+
+
+from sklearn.metrics import classification_report
+print(classification_report(y_test,decision_tree_clf.predict(X_test)))
+
+train_score = decision_tree_clf.score(X_train,y_train)
+test_score = decision_tree_clf.score(X_test,y_test)
+print("Accuracy train/test: %.2f/%.2f" % (train_score, test_score))
+
+
+# In[30]:
+
+
+print("""------------------- Decision trees -------------------""")
+print(classification_report(y_test,decision_tree_clf.predict(X_test)))
+
+print('\n')
+
+print("""------------------- Random forest -------------------""")
+print(classification_report(y_test,random_forest_clf.predict(X_test)))
+
+
+# In[31]:
+
+
+decision_tree_clf.feature_importances_
+
+
+# In[32]:
+
+
+feature_imp = pd.Series(decision_tree_clf.feature_importances_,index=X_train.columns)
+get_ipython().run_line_magic('matplotlib', 'inline')
+sns.barplot(x=feature_imp, y=feature_imp.index)
+plt.xlabel('Features Important')
+plt.ylabel('Features')
+plt.title('Features Important - Decision Trees')
+plt.show()
+
+
+# In[33]:
+
+
+feature_imp = pd.Series(random_forest_clf.feature_importances_,index=X_train.columns)
+get_ipython().run_line_magic('matplotlib', 'inline')
+sns.barplot(x=feature_imp, y=feature_imp.index)
+plt.xlabel('Features Important')
+plt.ylabel('Features')
+plt.title('Features Important - Random Forest')
+plt.show()
+
+
+# In[34]:
+
+
+from sklearn.metrics import confusion_matrix
+print("""------------------- Decision trees - Confusion Matrix -------------------""")
+print(pd.crosstab(y_test, decision_tree_clf.predict(X_test), rownames=['Real'], colnames=['Predict'], margins=True))
+
+
+# In[35]:
+
+
+print("""------------------- Random forest - Confusion Matrix -------------------""")
+print(pd.crosstab(y_test, random_forest_clf.predict(X_test), rownames=['Real'], colnames=['Predict'], margins=True))
+
+
+# In[36]:
+
+
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report
+
+logistic_regression = LogisticRegression(solver='liblinear',random_state=10)
+#logistic_regression = LogisticRegression(solver='lbfgs',multi_class='auto',max_iter=3)
+logistic_regression.fit(X_train,y_train)
+
+print('Logistic regression coefficients ', logistic_regression.coef_)
+print('Logistic regression intercept ', logistic_regression.intercept_)
+
+
+# In[37]:
+
+
+from sklearn.metrics import accuracy_score
+accuracy_train = accuracy_score(y_train,logistic_regression.predict(X_train))
+accuracy_test = accuracy_score(y_test,logistic_regression.predict(X_test))
+print('Accuracy train/test: %f/%f' %(accuracy_train, accuracy_test))
+
+print(classification_report(y_test,logistic_regression.predict(X_test)))
+
+
+# In[38]:
+
+
+print("""------------------- Logistic regression - Confusion Matrix -------------------""")
+print(pd.crosstab(y_test, logistic_regression.predict(X_test), rownames=['Real'], colnames=['Predict'], margins=True))
+
+
+# In[39]:
+
+
+estimator = random_forest_clf.estimators_[5]
+from sklearn.tree import DecisionTreeClassifier, export_graphviz
+
+export_graphviz(estimator, out_file='tree.dot', 
+                feature_names = random_forest_clf.feature_importances_,
+                class_names = X_train.columns,
+                rounded = True, proportion = False, 
+                precision = 2, filled = True)
+
+from subprocess import call
+call(['dot', '-Tpng', 'tree.dot', '-o', 'tree.png', '-Gdpi=600'])
+
+from IPython.display import Image
+Image(filename = 'tree.png')
+
+
+# In[40]:
+
+
+export_graphviz(estimator, out_file='tree.dot', 
+                feature_names = decision_tree_clf.feature_importances_,
+                class_names = X_train.columns,
+                rounded = True, proportion = False, 
+                precision = 2, filled = True)
+
+from subprocess import call
+call(['dot', '-Tpng', 'tree.dot', '-o', 'tree.png', '-Gdpi=600'])
+
+from IPython.display import Image
+Image(filename = 'tree.png')
+
+
+# In[41]:
+
+
+#Stop/Terminate the Spark connection, please always remember to do this step to release the resources after you finish your job.
+spark.stop()
+
