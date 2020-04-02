@@ -1,0 +1,847 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2019.4">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="78" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\ssbmyn\Downloads\CDS\MyBusinessCase\Tightening_15_31.xlsx|||`Tightening_15_31$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Tightening_15_31.xlsx
+Query=`Tightening_15_31$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="id" source="File: C:\Users\ssbmyn\Downloads\CDS\MyBusinessCase\Tightening_15_31.xlsx|||`Tightening_15_31$`" type="Double" />
+            <Field name="torquestatus" source="File: C:\Users\ssbmyn\Downloads\CDS\MyBusinessCase\Tightening_15_31.xlsx|||`Tightening_15_31$`" type="Double" />
+            <Field name="timestamp" size="255" source="File: C:\Users\ssbmyn\Downloads\CDS\MyBusinessCase\Tightening_15_31.xlsx|||`Tightening_15_31$`" type="V_String" />
+            <Field name="tighteningerrorstatus" source="File: C:\Users\ssbmyn\Downloads\CDS\MyBusinessCase\Tightening_15_31.xlsx|||`Tightening_15_31$`" type="Double" />
+            <Field name="torquemaxlimit" source="File: C:\Users\ssbmyn\Downloads\CDS\MyBusinessCase\Tightening_15_31.xlsx|||`Tightening_15_31$`" type="Double" />
+            <Field name="torqueminlimit" source="File: C:\Users\ssbmyn\Downloads\CDS\MyBusinessCase\Tightening_15_31.xlsx|||`Tightening_15_31$`" type="Double" />
+            <Field name="torquefinaltarget" source="File: C:\Users\ssbmyn\Downloads\CDS\MyBusinessCase\Tightening_15_31.xlsx|||`Tightening_15_31$`" type="Double" />
+            <Field name="torque" source="File: C:\Users\ssbmyn\Downloads\CDS\MyBusinessCase\Tightening_15_31.xlsx|||`Tightening_15_31$`" type="Double" />
+            <Field name="idtool" source="File: C:\Users\ssbmyn\Downloads\CDS\MyBusinessCase\Tightening_15_31.xlsx|||`Tightening_15_31$`" type="Double" />
+            <Field name="idstation" source="File: C:\Users\ssbmyn\Downloads\CDS\MyBusinessCase\Tightening_15_31.xlsx|||`Tightening_15_31$`" type="Double" />
+            <Field name="batchstatus" source="File: C:\Users\ssbmyn\Downloads\CDS\MyBusinessCase\Tightening_15_31.xlsx|||`Tightening_15_31$`" type="Double" />
+            <Field name="bcount" source="File: C:\Users\ssbmyn\Downloads\CDS\MyBusinessCase\Tightening_15_31.xlsx|||`Tightening_15_31$`" type="Double" />
+            <Field name="bsize" source="File: C:\Users\ssbmyn\Downloads\CDS\MyBusinessCase\Tightening_15_31.xlsx|||`Tightening_15_31$`" type="Double" />
+            <Field name="anglemin" source="File: C:\Users\ssbmyn\Downloads\CDS\MyBusinessCase\Tightening_15_31.xlsx|||`Tightening_15_31$`" type="Double" />
+            <Field name="anglemax" source="File: C:\Users\ssbmyn\Downloads\CDS\MyBusinessCase\Tightening_15_31.xlsx|||`Tightening_15_31$`" type="Double" />
+            <Field name="finalangletarget" source="File: C:\Users\ssbmyn\Downloads\CDS\MyBusinessCase\Tightening_15_31.xlsx|||`Tightening_15_31$`" type="Double" />
+            <Field name="angle" source="File: C:\Users\ssbmyn\Downloads\CDS\MyBusinessCase\Tightening_15_31.xlsx|||`Tightening_15_31$`" type="Double" />
+            <Field name="anglestatus" source="File: C:\Users\ssbmyn\Downloads\CDS\MyBusinessCase\Tightening_15_31.xlsx|||`Tightening_15_31$`" type="Double" />
+            <Field name="station_position" source="File: C:\Users\ssbmyn\Downloads\CDS\MyBusinessCase\Tightening_15_31.xlsx|||`Tightening_15_31$`" type="Double" />
+            <Field name="stationname" size="255" source="File: C:\Users\ssbmyn\Downloads\CDS\MyBusinessCase\Tightening_15_31.xlsx|||`Tightening_15_31$`" type="V_String" />
+            <Field name="psetname" size="255" source="File: C:\Users\ssbmyn\Downloads\CDS\MyBusinessCase\Tightening_15_31.xlsx|||`Tightening_15_31$`" type="V_String" />
+            <Field name="tighteningstatus" source="File: C:\Users\ssbmyn\Downloads\CDS\MyBusinessCase\Tightening_15_31.xlsx|||`Tightening_15_31$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings>
+        <Position x="246" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Select Fields">id=False,torquestatus=True,timestamp=False,tighteningerrorstatus=False,torquemaxlimit=True,torqueminlimit=True,torquefinaltarget=True,torque=False,idtool=True,idstation=True,batchstatus=True,bcount=True,bsize=True,anglemin=False,anglemax=False,finalangletarget=False,angle=False,anglestatus=True,station_position=True,stationname=False,psetname=False,tighteningstatus=True</Value>
+          <Value name="Sample Data">False</Value>
+          <Value name="Number">True</Value>
+          <Value name="NNumber">5000</Value>
+          <Value name="Percent">False</Value>
+          <Value name="NPercent">10</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Predictive Tools\Field_Summary_Report.yxmc" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="390" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ssbmyn\AppData\Local\Temp\Engine_9312_9ec61fe3c49c436d82d49ca5a372905d_\Engine_24004_e558b7d7843f44b8bb1787cdb221f0a6_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="390" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ssbmyn\AppData\Local\Temp\Engine_9312_9ec61fe3c49c436d82d49ca5a372905d_\Engine_24004_c51c860b5b2148b79e8cb4ca0b81606c_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings>
+        <Position x="270" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="estimation pct">30</Value>
+          <Value name="validation pct">30</Value>
+          <Value name="rand seed">1</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Predictive Tools\Create_Samples.yxmc" />
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1254" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ssbmyn\AppData\Local\Temp\Engine_9312_9ec61fe3c49c436d82d49ca5a372905d_\Engine_24004_1976884505564589a17370bb1f364f93_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="Score">
+        <Position x="606" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="modelChoice">Local Model</Value>
+          <Value name="score field">Result</Value>
+          <Value name="is oversampled">True</Value>
+          <Value name="oversampled value">0</Value>
+          <Value name="original percent">8</Value>
+          <Value name="log y">False</Value>
+          <Value name="prediction.interval">False</Value>
+          <Value name="interval.level">95</Value>
+          <Value name="append.xdf">False</Value>
+          <Value name="num.records">256000</Value>
+          <Value name="credentials">
+          </Value>
+          <Value name="models">
+          </Value>
+          <Value name="page">
+          </Value>
+          <Value name="errorStatus">
+          </Value>
+          <Value name="modelDetailJSON">
+          </Value>
+          <Value name="modelDetails">{"Name":"","Owner":"","Status":"","Id":"","LastDeployment":"","LastUpdated":"","LatestVersion":"","ActiveVersion":"","NumReplications":"","NumVersions":""}</Value>
+          <Value name="promoteURL">
+          </Value>
+          <Value name="username">
+          </Value>
+          <Value name="model_name">
+          </Value>
+          <Value name="model_owner">
+          </Value>
+          <Value name="apiKey">
+          </Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Score\Supporting_Macros\score-engine.yxmc" EngineDll="Macro" EngineDllEntryPoint="Score\Supporting_Macros\score-engine.yxmc" />
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings>
+        <Position x="210" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="field">tighteningstatus</Value>
+          <Value name="breaks">auto</Value>
+          <Value name="density">False</Value>
+          <Value name="scale">1.0</Value>
+          <Value name="inches">True</Value>
+          <Value name="in.w">5.50</Value>
+          <Value name="in.h">5.50</Value>
+          <Value name="centimeters">False</Value>
+          <Value name="cm.w">13.00</Value>
+          <Value name="cm.h">14.95</Value>
+          <Value name="graph.resolution">1x</Value>
+          <Value name="pointsize">10</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Predictive Tools\Histogram.yxmc" />
+    </Node>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="306" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ssbmyn\AppData\Local\Temp\Engine_9312_9ec61fe3c49c436d82d49ca5a372905d_\Engine_24004_4525cd2116d540eba45aec9833d8127a_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+        <Position x="714" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UniqueFields>
+            <Field field="id" />
+            <Field field="torquestatus" />
+            <Field field="torquemaxlimit" />
+            <Field field="torqueminlimit" />
+            <Field field="torquefinaltarget" />
+            <Field field="torque" />
+            <Field field="idtool" />
+            <Field field="idstation" />
+            <Field field="batchstatus" />
+            <Field field="bcount" />
+            <Field field="bsize" />
+            <Field field="anglemin" />
+            <Field field="anglemax" />
+            <Field field="finalangletarget" />
+            <Field field="angle" />
+            <Field field="anglestatus" />
+            <Field field="station_position" />
+            <Field field="stationname" />
+            <Field field="psetname" />
+            <Field field="tighteningstatus" />
+            <Field field="Result" />
+          </UniqueFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="834" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>tighteningstatus</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2020-01-03 18:34:45</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>0</Operand>
+              <StartDate>2020-01-03 18:34:45</StartDate>
+              <EndDate>2020-01-03 18:34:45</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[tighteningstatus] = 0</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="39">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1122" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ssbmyn\AppData\Local\Temp\Engine_9312_9ec61fe3c49c436d82d49ca5a372905d_\Engine_24004_83a5b1f076ff4cdd9bcde7f4d23b6cb1_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="40">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1026" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="0">
+            <Field field="Result" order="Descending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Result - Descending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="41">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1014" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="0">
+            <Field field="Result" order="Descending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Result - Descending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="42">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1314" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="25" MaxRecords="">\\brsafs03\powerbi$\IT\Tightening_Predict.xlsx|||Sheet1</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>RemoveFile</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Tightening_Predict.xlsx
+Query=Sheet1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="43">
+      <GuiSettings Plugin="Decision_Tree">
+        <Position x="438" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="curPage">Home</Value>
+          <Value name="curTab">model</Value>
+          <Value name="curToggle">toggle-main</Value>
+          <Value name="display.static">True</Value>
+          <Value name="set_seed_cv">True</Value>
+          <Value name="showClassificationCV">False</Value>
+          <Value name="showWhenTreePlotAvailable">True</Value>
+          <Value name="use.gini">True</Value>
+          <Value name="use.information">False</Value>
+          <Value name="usesurrogate.0">True</Value>
+          <Value name="usesurrogate.1">False</Value>
+          <Value name="usesurrogate.2">False</Value>
+          <Value name="total.correct">True</Value>
+          <Value name="percent.correct">False</Value>
+          <Value name="model_type">auto</Value>
+          <Value name="auto">True</Value>
+          <Value name="classification">False</Value>
+          <Value name="regression">False</Value>
+          <Value name="tree_summary">Counts</Value>
+          <Value name="Counts">True</Value>
+          <Value name="Proportions">False</Value>
+          <Value name="tree_plot_size">tree.inches</Value>
+          <Value name="tree.inches">True</Value>
+          <Value name="tree.centimeters">False</Value>
+          <Value name="pruning_plot_size">prune.inches</Value>
+          <Value name="prune.inches">True</Value>
+          <Value name="prune.centimeters">False</Value>
+          <Value name="Model Name">Decision_Tree</Value>
+          <Value name="Y Var">tighteningstatus</Value>
+          <Value name="X Vars">torquestatus,torquemaxlimit,torqueminlimit,torquefinaltarget,torque,idtool,idstation,batchstatus,bcount,bsize,anglemin,anglemax,finalangletarget,angle,anglestatus,station_position</Value>
+          <Value name="model.algorithm">rpart</Value>
+          <Value name="use.weights">False</Value>
+          <Value name="select.weights" />
+          <Value name="splitting_criteria">use.gini</Value>
+          <Value name="surrogate_use">usesurrogate.0</Value>
+          <Value name="surrogate_split_criteria">total.correct</Value>
+          <Value name="min.split">20</Value>
+          <Value name="min.bucket">7</Value>
+          <Value name="xval.folds">10</Value>
+          <Value name="max.depth">20</Value>
+          <Value name="max.bins">
+          </Value>
+          <Value name="set_cp">False</Value>
+          <Value name="cp">0</Value>
+          <Value name="rules">False</Value>
+          <Value name="bands_check">False</Value>
+          <Value name="bands">10</Value>
+          <Value name="subset">False</Value>
+          <Value name="winnow">False</Value>
+          <Value name="GlobalPruning">False</Value>
+          <Value name="fuzzyThreshold">False</Value>
+          <Value name="earlyStopping">False</Value>
+          <Value name="trials">1</Value>
+          <Value name="CF">0.25</Value>
+          <Value name="minCases">2</Value>
+          <Value name="sample">0</Value>
+          <Value name="seed">1</Value>
+          <Value name="use_cv">False</Value>
+          <Value name="numberFolds">5</Value>
+          <Value name="numberTrials">3</Value>
+          <Value name="posClass">
+          </Value>
+          <Value name="stratified">False</Value>
+          <Value name="cv_seed">1</Value>
+          <Value name="tree.plot">False</Value>
+          <Value name="Branch Dist">False</Value>
+          <Value name="tree.in.w">5.5</Value>
+          <Value name="tree.in.h">5.5</Value>
+          <Value name="tree.cm.w">13</Value>
+          <Value name="tree.cm.h">14.95</Value>
+          <Value name="tree.graph.resolution">1x</Value>
+          <Value name="tree.pointsize">8</Value>
+          <Value name="prune.plot">False</Value>
+          <Value name="prune.in.w">5.5</Value>
+          <Value name="prune.in.h">5.5</Value>
+          <Value name="prune.cm.w">13</Value>
+          <Value name="prune.cm.h">14.95</Value>
+          <Value name="prune.graph.resolution">1x</Value>
+          <Value name="prune.pointsize">10</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Decision_Tree</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Decision_Tree/Supporting_Macros/Decision_Tree.yxmc" EngineDll="Macro" EngineDllEntryPoint="Decision_Tree/Supporting_Macros/Decision_Tree.yxmc" />
+    </Node>
+    <Node ToolID="44">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="918" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>&gt;=</Operator>
+            <Field>Result</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2020-01-06 19:00:04</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>0.7</Operand>
+              <StartDate>2020-01-06 19:00:04</StartDate>
+              <EndDate>2020-01-06 19:00:04</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Result] &gt;= 0.7</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="45">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="894" y="138" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text><![CDATA[Only the tools with more 70% failing
+]]></Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Red" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="46">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="138" width="108" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>15-Oct to 31-Oct</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Red" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="47">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="606" y="210" width="100" height="76" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>The column Result will be created according to Decision Tree predictive</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Red" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="48">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="1314" y="66" width="100" height="72" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Column Result shows the percentage of fails according to Machine Learning</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Red" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="49">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1266" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">aka:Tightening|||Tightening_Predict</File>
+          <Passwords />
+          <CachedCosmeticName />
+          <FormatSpecificOptions>
+            <TransactionMessages>False</TransactionMessages>
+            <Geometry>False</Geometry>
+            <Projection />
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <SpatialObjSize>8000</SpatialObjSize>
+            <OutputOption>Overwrite</OutputOption>
+            <PostSQL />
+            <TransactionSize>10000</TransactionSize>
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>aka:Tightening
+Query=Tightening_Predict</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="50">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="534" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ssbmyn\AppData\Local\Temp\Engine_9312_9ec61fe3c49c436d82d49ca5a372905d_\Engine_24004_a47f4f120c4840d2a2835e193b4633db_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="51">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="522" y="390" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ssbmyn\AppData\Local\Temp\Engine_9312_9ec61fe3c49c436d82d49ca5a372905d_\Engine_24004_08c5e9626bdf418fbce21701bfd95393_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="5" Connection="Field Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Reports" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Interactive" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Validation" />
+      <Destination ToolID="30" Connection="Model" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="30" Connection="Data" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Estimation" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Unique" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="False" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="True" />
+      <Destination ToolID="44" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="Output" />
+      <Destination ToolID="42" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="Output" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="Output" />
+      <Destination ToolID="49" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="39" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Reports" />
+      <Destination ToolID="50" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Interactive" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="44" Connection="True" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Tightening15_31</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
