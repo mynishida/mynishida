@@ -1,0 +1,327 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2019.4">
+  <Nodes>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="150" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\ssbmyn\Downloads\Respostas.xlsx|||`Sheet1$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Respostas.xlsx
+Query=`Sheet1$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="OBS" size="630" source="File: C:\Users\ssbmyn\Downloads\Respostas.xlsx|||`Sheet1$`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="CognitiveServicesTextAnalytics">
+        <Position x="330" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="TextFieldSelect">OBS</Value>
+          <Value name="analysisSelect">s</Value>
+          <Value name="AccountKey">453A5E754B5AEB859565CCFD907DA96945470F023B0BB723B6E71D3FF0FBFC9906C9EFD929743009F0500796C5D78A42CBCCF2B7E1FFDAC75E06B05D9219E7CD875B1A5590CD1CBC5FEB703DDC0C48B064C25C7B154993A318DD1BB6F73869995F7614E4D9DC620B0DDECF9D97E5F246958F11DA582BFA1095BF7EE287970DFF2FEF4760B517A2D4AC6304C7EC79D8B902F8067DD0798BBBE7EC7C379E9ACF79EDA072BAA1DFBCA3D32FEBF521DD2FEEEBC3ED9252F2B3EF93CF9CC719159CB92FA7C7245A7DFF83A05436F60C972AC977851E422081AE56188A266604852F7146A724F354DB770D4FC26D1870A7EC20D1845F66A799DD1630F91AB79C4FEC6F8AE7E43E6EA492C7E4EE37BB8D15BDB797BC7E177E2F8</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="CognitiveServicesTextAnalytics\Supporting_Macros\CognitiveServicesTextAnalytics.yxmc" EngineDll="Macro" EngineDllEntryPoint="CognitiveServicesTextAnalytics\Supporting_Macros\CognitiveServicesTextAnalytics.yxmc" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="522" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ssbmyn\AppData\Local\Temp\Engine_26152_62c3ebca3b9c4cbebf458618e0c997a5_\Engine_23336_8508d22e95d04c149875971525766bcb_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="CognitiveServicesTextAnalytics">
+        <Position x="354" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="TextFieldSelect">OBS</Value>
+          <Value name="analysisSelect">k</Value>
+          <Value name="AccountKey">453A5E754B5AEB859565CCFD907DA96945470F023B0BB723B6E71D3FF0FBFC9906C9EFD929743009F0500796C5D78A42CBCCF2B7E1FFDAC75E06B05D9219E7CD875B1A5590CD1CBC5FEB703DDC0C48B064C25C7B154993A318DD1BB6F73869995F7614E4D9DC620B0DDECF9D97E5F246958F11DA582BFA1095BF7EE287970DFF2FEF4760B517A2D4AC6304C7EC79D8B902F8067DD0798BBBE7EC7C379E9ACF79EDA072BAA1DFBCA3D32FEBF521DD2FEEEBC3ED9252F2B3EF93CF9CC719159CB92FA7C7245A7DFF83A05436F60C972AC977851E422081AE56188A266604852F7146A724F354DB770D4FC26D1870A7EC20D1845F66A799DD1630F91AB79C4FEC6F8AE7E43E6EA492C7E4EE37BB8D15BDB797BC7E177E2F8</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="CognitiveServicesTextAnalytics\Supporting_Macros\CognitiveServicesTextAnalytics.yxmc" EngineDll="Macro" EngineDllEntryPoint="CognitiveServicesTextAnalytics\Supporting_Macros\CognitiveServicesTextAnalytics.yxmc" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="CognitiveServicesTextAnalytics">
+        <Position x="366" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="TextFieldSelect">OBS</Value>
+          <Value name="analysisSelect">l</Value>
+          <Value name="AccountKey">453A5E754B5AEB859565CCFD907DA96945470F023B0BB723B6E71D3FF0FBFC9906C9EFD929743009F0500796C5D78A42CBCCF2B7E1FFDAC75E06B05D9219E7CD875B1A5590CD1CBC5FEB703DDC0C48B064C25C7B154993A318DD1BB6F73869995F7614E4D9DC620B0DDECF9D97E5F246958F11DA582BFA1095BF7EE287970DFF2FEF4760B517A2D4AC6304C7EC79D8B902F8067DD0798BBBE7EC7C379E9ACF79EDA072BAA1DFBCA3D32FEBF521DD2FEEEBC3ED9252F2B3EF93CF9CC719159CB92FA7C7245A7DFF83A05436F60C972AC977851E422081AE56188A266604852F7146A724F354DB770D4FC26D1870A7EC20D1845F66A799DD1630F91AB79C4FEC6F8AE7E43E6EA492C7E4EE37BB8D15BDB797BC7E177E2F8</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="CognitiveServicesTextAnalytics\Supporting_Macros\CognitiveServicesTextAnalytics.yxmc" EngineDll="Macro" EngineDllEntryPoint="CognitiveServicesTextAnalytics\Supporting_Macros\CognitiveServicesTextAnalytics.yxmc" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="522" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="25" MaxRecords="">C:\Users\ssbmyn\Downloads\Sentimental.xlsx|||Sheet1</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Sentimental.xlsx
+Query=Sheet1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="606" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ssbmyn\AppData\Local\Temp\Engine_26152_62c3ebca3b9c4cbebf458618e0c997a5_\Engine_23336_06dd9875c8164792b2accfaebacc48f1_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="606" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="25" MaxRecords="">C:\Users\ssbmyn\Downloads\Key.xlsx|||Sheet1</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Key.xlsx
+Query=Sheet1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="486" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ssbmyn\AppData\Local\Temp\Engine_26152_62c3ebca3b9c4cbebf458618e0c997a5_\Engine_23336_ece60bd4fab34667af8afbbf9d8e0498_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="486" y="354" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="25" MaxRecords="">C:\Users\ssbmyn\Downloads\Language.xlsx|||Sheet1</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Language.xlsx
+Query=Sheet1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="StandardOutput" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="StandardOutput" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="StandardOutput" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="StandardOutput" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="StandardOutput" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="StandardOutput" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Sentimental_Analysis</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
